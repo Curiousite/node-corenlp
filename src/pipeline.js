@@ -216,7 +216,7 @@ class Pipeline {
    */
   _getAnnotators() {
     return this._getAnnotatorsKeys()
-      .map(annotatorKey => ANNOTATORS_BY_KEY[annotatorKey]);
+      .map(annotatorKey => ANNOTATORS_BY_KEY[annotatorKey]).filter(annotator => annotator !== undefined);
   }
 
   /**
